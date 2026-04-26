@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+     <html><head><title>BiBot OAuth</title></head>
+     <body style="font-family:monospace;padding:24px">
+     <h2>Authorization Code:</h2>
+     <pre id="code" style="background:#eee;padding:12px;font-size:14px"></pre>
+     <h2>State:</h2>
+     <pre id="state" style="background:#eee;padding:12px;font-size:14px"></pre>
+     <script>
+       const p = new URLSearchParams(location.search);
+       document.getElementById('code').textContent = p.get('code') || '(no code)';
+       document.getElementById('state').textContent = p.get('state') || '(no state)';
+     </script></body></html>
